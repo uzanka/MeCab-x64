@@ -19,12 +19,12 @@ https://taku910.github.io/mecab/
 Windows の64ビット版の MeCab の作成方法は以下の通りです。
 
 - MeCab(64ビット版)
-  - MeCabのダウンロード
-  - MeCab(32ビット版)のインストール
-  - MeCab(64ビット版)のソースファイルの修正
-  - MeCab(64ビット版)のビルド
-  - MeCab(64ビット版)環境の作成
-  - MeCab(64ビット版)の動作確認
+  - MeCab のダウンロード
+  - MeCab(32ビット版) のインストール
+  - MeCab(64ビット版) のソースファイルの修正
+  - MeCab(64ビット版) のビルド
+  - MeCab(64ビット版) 環境の作成
+  - MeCab(64ビット版) の動作確認
 
 - jumandic 辞書
   - mecab ソースファイルのダウンロード
@@ -41,7 +41,7 @@ Windows の64ビット版の MeCab の作成方法は以下の通りです。
 - おまけ
 
 
-### **MeCabのダウンロード**
+### **MeCab のダウンロード**
 以下のサイトから MeCab のインストーラとソースファイルをダウンロードします。
 
 https://taku910.github.io/mecab/
@@ -50,8 +50,8 @@ https://taku910.github.io/mecab/
 - ソースファイル : mecab-0.996.tar.gz
 
 
-### MeCab(32ビット版)のインストール
-インストーラ(mecab-0.996.exe)を実行し MeCab(32ビット版) をインストールします。
+### MeCab(32ビット版) のインストール
+インストーラ (mecab-0.996.exe) を実行し MeCab(32ビット版) をインストールします。
 
 - MeCabセットアップ画面の「辞書の文字コードの選択」で、 **UTF-8** (デフォルトはSJIS) を指定します。
 - MeCabセットアップ画面の「インストール先の指定」で、MeCabをインストールするパスを指定します。
@@ -72,13 +72,13 @@ MeCab 実行時に毎回指定するのが面倒な場合は、利用する場�
 また、MeCab(64ビット版) のビルド時にもインストールパスを指定しますので、MeCab(64ビット版)として利用するパスを指定しておくとよいでしょう。
 
 
-### **MeCab(64ビット版)のソースファイルの修正**
-ソースファイル(mecab-0.996.tar.gz)を展開します。
+### **MeCab(64ビット版) のソースファイルの修正**
+ソースファイル (mecab-0.996.tar.gz) を展開します。
 
-展開したソースの mecab-0.996\\src ディレクトリに移動します。
+展開したソースの {ソースファイルを展開したパス}\\mecab-0.996\\src ディレクトリに移動します。
 
 ~~~
-cd mecab-0.996\src
+cd {ソースファイルを展開したパス}\mecab-0.996\src
 ~~~
 
 **Makefile.msvc**  
@@ -100,7 +100,7 @@ LDFLAGS = /nologo /OPT:REF /OPT:ICF /LTCG /NXCOMPAT /DYNAMICBASE /MACHINE:X64 AD
 Makefile.msvcの
 8行目の @DIC_VERSION@ を 102 に、
 9行目の @VERSION@ を 0.996 に、
-11行目の c:\\\\Program Files\\\\mecab\\\\etc\\\\mecabrc を C:\MeCab-x64\\\\etc\\\\mecabrc に修正します。
+11行目の c:\\\\Program Files\\\\mecab\\\\etc\\\\mecabrc を C:\\\\MeCab-x64\\\\etc\\\\mecabrc に修正します。
 
 ~~~
 DEFS =  -D_CRT_SECURE_NO_DEPRECATE -DMECAB_USE_THREAD \
@@ -132,7 +132,7 @@ writer.cpp の260行目にキャスト (unsigned int) を追加します。
 ~~~
 
 
-### **MeCab(64ビット版)のビルド**
+### **MeCab(64ビット版) のビルド**
 「VS 2017 用 x64 Native Tools コマンドプロンプト」を起動します。
 ソースファイルのあるディレクトリに移動し、ビルドを実行します。
 
@@ -141,15 +141,15 @@ cd {ソースファイルを展開したパス}\mecab-0.996\src
 nmake -f Makefile.msvc
 ~~~
 
-src 配下にモジュールが作成されます。
+{ソースファイルを展開したパス}\\mecab-0.996\\src 配下にモジュールが作成されます。
 
 
 **Note:**  
-Visual Studio 2017以外のバージョンを使用する場合は、適宜読み替えてください。
+Visual Studio 2017 以外のバージョンを使用する場合は、適宜読み替えてください。
 
 
-### **MeCab(64ビット版)環境の作成**
-MeCab(32ビット版)環境を変更しますので、念のためバックアップしておいてください。
+### **MeCab(64ビット版) 環境の作成**
+MeCab(32ビット版) 環境を変更しますので、念のためバックアップしておいてください。
 
 ビルドした MeCab(64ビット版) を、事前にインストールした MeCab(32ビット版) 環境の C:\MeCab-x64\bin 配下に上書きします。
 
@@ -164,7 +164,7 @@ MeCab(32ビット版)環境を変更しますので、念のためバックア�
 2019/10/30  16:59           106,496 mecab.exe
 ~~~
 
-ビルドした MeCab(64ビット版) を、事前にインストールした MeCab(32ビット版)環境の C:\MeCab-x64\sdk 配下に上書きします。
+ビルドした MeCab(64ビット版) を、事前にインストールした MeCab(32ビット版) 環境の C:\MeCab-x64\sdk 配下に上書きします。
 
 ~~~
 > dir C:\MeCab-x64\sdk
@@ -176,7 +176,7 @@ MeCab(32ビット版)環境を変更しますので、念のためバックア�
 以上で MeCab(64ビット版) 環境ができました。
 
 
-### **MeCab(64ビット版)の動作確認**
+### **MeCab(64ビット版) の動作確認**
 コマンドプロンプトを起動します。
 コマンドプロンプトで以下のコマンドを実行します。
 
@@ -203,13 +203,16 @@ ipadic 辞書はインストーラ(32ビット版)に含まれています。
 
 ### **mecab ソースファイルのダウンロード**
 mecab の git リポジトリから master ソースファイルをダウンロードします。
+git リポジトリの Download ボタンを押せば mecab-master.zip ファイルがダウンロードできます。
 gitを使用している場合は clone してもよいでしょう。
 
 https://github.com/taku910/mecab
 
 
 ### **jumandic 辞書のビルド**
-ダウンロードした master ソースファイルを展開します。
+ダウンロードした master ソースファイル (mecab-master.zip) を展開します。
+git をクローンした場合は、ソースツリーを適宜コピーを作成してください。
+
 以下のコマンドを実行し、jumandic をビルドします。
 
 ~~~
@@ -225,7 +228,7 @@ tar cvf /tmp/jumandic.tar jumandic/
 
 
 ### **jumandic 辞書環境の作成**
-/tmp/jumandic.tar ファイルを展開し、MeCab(64ビット環境) の C:\MeCab-x64\dic パス配下に配置します。
+/tmp/jumandic.tar ファイルを展開し、MeCab(64ビット環境) の C:\\MeCab-x64\\dic パス配下に配置します。
 以下のようなファイル構成になります。
 
 ~~~
@@ -248,7 +251,7 @@ copy C:\MeCab-x64\etc\mecabrc C:\MeCab-x64\etc\mecabrc-jumandic
 ~~~
 
 **mecabrc-jumandic**  
-6行目の $(rcpath)\..\dic\ipadic を $(rcpath)\..\dic\jumandic に変更します。
+6行目の ipadic を jumandic に変更します。
 
 ~~~
 dicdir =  $(rcpath)\..\dic\jumandic
@@ -282,13 +285,16 @@ mecab-ipadic-neologd 辞書のビルドは Linux を使用します。
 
 ### **mecab-ipadic-neologd ソースファイルのダウンロード**
 mecab-ipadic-neologd の git リポジトリから master ソースファイルをダウンロードします。
+git リポジトリの Download ボタンを押せば mecab-ipadic-neologd-master.zip ファイルがダウンロードできます。
 git を使用している場合は clone してもよいでしょう。
 
 https://github.com/neologd/mecab-ipadic-neologd
 
 
 ### **mecab-ipadic-neologd 辞書のビルド**
-ダウンロードした master ソースファイルを展開します。
+ダウンロードした master ソースファイル (mecab-ipadic-neologd-master.zip) を展開します。
+git をクローンした場合は、ソースツリーを適宜コピーを作成してください。
+
 以下のコマンドを実行し、mecab-ipadic-neologd をビルドします。
 
 ~~~
@@ -302,7 +308,7 @@ tar cvf /tmp/mecab-ipadic-neologd.tar mecab-ipadic-neologd/
 
 
 ### **mecab-ipadic-neologd 辞書環境の作成**
-/tmp/mecab-ipadic-neologd.tar ファイルを展開し、MeCab(64ビット環境) の C:\MeCab-x64\dic パス配下に配置します。
+/tmp/mecab-ipadic-neologd.tar ファイルを展開し、MeCab(64ビット環境) の C:\\MeCab-x64\\dic パス配下に配置します。
 以下のようなファイル構成になります。
 
 ~~~
@@ -325,7 +331,7 @@ copy C:\MeCab-x64\etc\mecabrc C:\MeCab-x64\etc\mecabrc-ipadic-neologd
 ~~~
 
 **mecabrc-ipadic-neologd**  
-6行目の $(rcpath)\..\dic\ipadic を $(rcpath)\..\dic\mecabrc-ipadic-neologd に変更します。
+6行目の ipadic を mecabrc-ipadic-neologd に変更します。
 
 ~~~
 dicdir =  $(rcpath)\..\dic\mecabrc-ipadic-neologd
