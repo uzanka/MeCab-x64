@@ -247,7 +247,7 @@ mecabrc ファイルをコピーして修正し、jumandic 辞書用の設定フ
 copy C:\MeCab-x64\etc\mecabrc C:\MeCab-x64\etc\mecabrc-jumandic
 ~~~
 
-**mecabrc**  
+**mecabrc-jumandic**  
 6行目の $(rcpath)\..\dic\ipadic を $(rcpath)\..\dic\jumandic に変更します。
 
 ~~~
