@@ -19,24 +19,24 @@ https://taku910.github.io/mecab/
 Windows の64ビット版の MeCab の作成方法は以下の通りです。
 
 - MeCab(64ビット版)
- - MeCabのダウンロード
- - MeCab(32ビット版)のインストール
- - MeCab(64ビット版)のソースファイルの修正
- - MeCab(64ビット版)のビルド
- - MeCab(64ビット版)環境の作成
- - MeCab(64ビット版)の動作確認
+  - MeCabのダウンロード
+  - MeCab(32ビット版)のインストール
+  - MeCab(64ビット版)のソースファイルの修正
+  - MeCab(64ビット版)のビルド
+  - MeCab(64ビット版)環境の作成
+  - MeCab(64ビット版)の動作確認
 
 - jumandic 辞書
- - mecab ソースファイルのダウンロード
- - jumandic 辞書のビルド
- - jumandic 辞書環境の作成
- - jumandic 辞書の動作確認
+  - mecab ソースファイルのダウンロード
+  - jumandic 辞書のビルド
+  - jumandic 辞書環境の作成
+  - jumandic 辞書の動作確認
 
 - mecab-ipadic-neologd 辞書
- - mecab-ipadic-neologd ソースファイルのダウンロード
- - mecab-ipadic-neologd 辞書のビルド
- - mecab-ipadic-neologd 辞書環境の作成
- - mecab-ipadic-neologd 辞書の動作確認
+  - mecab-ipadic-neologd ソースファイルのダウンロード
+  - mecab-ipadic-neologd 辞書のビルド
+  - mecab-ipadic-neologd 辞書環境の作成
+  - mecab-ipadic-neologd 辞書の動作確認
 
 - おまけ
 
